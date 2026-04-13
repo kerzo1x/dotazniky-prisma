@@ -1,7 +1,18 @@
 import { Elysia } from "elysia";
+import { swagger } from "@elysiajs/swagger";
+import cors from "@elysiajs/cors";
+import env from "./config/env";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+const app = new Elysia()
+.use(cors())
+.use(swagger())
+.get("/", () => ({ status: "ok", message: "Questionaire API is running" }))
 
+
+
+
+
+.listen(3000);
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  ` \x1b[32m>> 🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}\x1b[0m`
 );

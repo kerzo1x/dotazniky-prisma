@@ -1,8 +1,8 @@
 import { Elysia, ValidationError } from "elysia";
-import { ApplicationException } from "../exceptions/ApplicationException";
-import { CriticalException } from "../exceptions/CriticalException";
-import { logger } from "../../logger/services/Logger";
-import env from "../../../../config/env";
+import { ApplicationException } from "@/module/util/http/exceptions/ApplicationException";
+import { CriticalException } from "@/module/util/http/exceptions/CriticalException";
+import { logger } from "@/module/util/logger/services/Logger";
+import env from "@/config/env";
 
 export const exceptionHandler = new Elysia().onError(
   { as: "scoped" },

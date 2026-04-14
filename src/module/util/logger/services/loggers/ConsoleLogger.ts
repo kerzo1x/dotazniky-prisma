@@ -1,5 +1,5 @@
-import { LogEntry } from "../../types/LogEntry";
-import { COLORS } from "../../enums/colors";
+import { LogEntry } from "@/module/util/logger/types/LogEntry";
+import { COLORS } from "@/module/util/logger/enums/colors";
 
 class ConsoleLogger {
   private formatLocalLog(entry: LogEntry): string {

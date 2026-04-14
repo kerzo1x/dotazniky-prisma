@@ -1,4 +1,4 @@
-import { LogEntry } from "../../types/LogEntry";
+import { LogEntry } from "@/module/util/logger/types/LogEntry";
 
 /** No-op stub — console-only deployment. */
 class CloudwatchLogger {

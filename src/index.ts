@@ -2,10 +2,12 @@ import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
 import cors from "@elysiajs/cors";
 import env from "./config/env";
+import { exceptionHandler } from "./module/util/http/middlewares/exception-handler";
 
 const app = new Elysia()
 .use(cors())
 .use(swagger())
+.use(exceptionHandler)
 .get("/", () => ({ status: "ok", message: "Questionaire API is running" }))
 
 

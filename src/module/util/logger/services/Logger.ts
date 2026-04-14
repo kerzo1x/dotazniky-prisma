@@ -1,6 +1,6 @@
-import { LogEntry } from "../types/LogEntry";
-import { consoleLogger } from "./loggers/ConsoleLogger";
-import { cloudwatchLogger } from "./loggers/CloudwatchLogger";
+import { LogEntry } from "@/module/util/logger/types/LogEntry";
+import { consoleLogger } from "@/module/util/logger/services/loggers/ConsoleLogger";
+import { cloudwatchLogger } from "@/module/util/logger/services/loggers/CloudwatchLogger";
 
 class Logger {
   private async sendLog(entry: LogEntry): Promise<void> {
